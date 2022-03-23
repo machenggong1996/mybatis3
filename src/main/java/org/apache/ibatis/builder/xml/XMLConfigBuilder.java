@@ -365,6 +365,7 @@ public class XMLConfigBuilder extends BaseBuilder {
       for (XNode child : parent.getChildren()) {
         if ("package".equals(child.getName())) {
           String mapperPackage = child.getStringAttribute("name");
+          // 添加mapper接口
           configuration.addMappers(mapperPackage);
         } else {
           String resource = child.getStringAttribute("resource");
