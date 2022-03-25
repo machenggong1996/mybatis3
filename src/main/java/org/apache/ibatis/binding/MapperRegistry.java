@@ -70,6 +70,7 @@ public class MapperRegistry {
       }
       boolean loadCompleted = false;
       try {
+        // 代理对象工厂
         knownMappers.put(type, new MapperProxyFactory<>(type));
         // It's important that the type is added before the parser is run
         // otherwise the binding may automatically be attempted by the
